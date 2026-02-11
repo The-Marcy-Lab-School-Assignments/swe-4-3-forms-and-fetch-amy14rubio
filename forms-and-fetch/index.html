@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms-and-fetch</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Pokemon!</h1>
+      <p id="error"></p>
+      <p id="success"></p>
+      <h2>Capture Pokemon</h2>
+      <form id="capture-form" action="https://formspree.io/f/mkovojnd" method="POST">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div>
+          <label for="types">Types</label>
+          <input type="text" id="types" name="types" />
+        </div>
+        <div>
+          <label for="isFavorite">Favorite</label>
+          <input type="checkbox" id="isFavorite" name="isFavorite" value="isFavorite" />
+        </div>
+        <button type="submit">Capture</button>
+      </form>
+      <h2>Discovered Pokemon</h2>
+      <button id="discover-button">Find New Pokemon</button>
+      <ul id="discovered-list"></ul>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
